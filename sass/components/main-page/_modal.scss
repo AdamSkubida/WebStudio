@@ -1,8 +1,8 @@
 .modal-overlay {
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
   display: flex;
   top: 0;
   left: 0;
@@ -10,11 +10,6 @@
   align-items: center;
   z-index: 9999;
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media (min-width: 768px) {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .is-hidden {
@@ -25,7 +20,8 @@
 
 .modal-box {
   background-color: rgb(255, 255, 255);
-  width: 450px;
+  width: 98%;
+  max-width: 450px;
   height: 609px;
   display: flex;
   justify-content: flex-end;
@@ -34,8 +30,13 @@
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
+  @media (min-width: 768px) {
+    max-width: 450px;
+    height: 609px;
+  }
+
   @media (min-width: 1200px) {
-    width: 528px;
+    max-width: 528px;
     height: 611px;
   }
 
