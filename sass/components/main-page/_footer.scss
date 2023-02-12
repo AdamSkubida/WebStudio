@@ -5,8 +5,13 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
 
   &__logo {
     font-family: "Raleway";
@@ -94,6 +99,11 @@
 
   &__form {
     display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1200px) {
+      flex-direction: row;
+    }
 
     &-title {
       font-weight: 700;
