@@ -10,9 +10,23 @@
   margin: 0 auto;
   align-items: center;
 
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px;
+  }
+
   @media (min-width: 1200px) {
     flex-direction: row;
     align-items: normal;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  &__box {
+    @media (min-width: 768px) {
+    }
   }
 
   &__logo {
@@ -68,6 +82,10 @@
   .footer__social-media {
     padding-top: 60px;
 
+    @media (min-width: 768px) {
+      padding-top: 0;
+    }
+
     @media (min-width: 1200px) {
       padding-top: 72px;
     }
@@ -118,6 +136,10 @@
     margin-top: 60px;
     justify-content: center;
 
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+
     @media (min-width: 1200px) {
       justify-content: normal;
       margin: 72px 0 0 78px;
@@ -165,6 +187,17 @@
 
       &:placeholder {
         color: rgba(255, 255, 255, 0.6);
+      }
+
+      @media (min-width: 768px) {
+        width: 450px;
+        margin: 20px 152px 0 152px;
+      }
+
+      @media (min-width: 1200px) {
+        width: 358px;
+        margin: 0 auto;
+        margin-top: 20px;
       }
     }
 
