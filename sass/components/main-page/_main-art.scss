@@ -4,12 +4,63 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/background_img.jpg");
-  width: 1600px;
+    url("/images/mobile-main-art-img-1x.jpg");
+  min-width: 400px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #2f303a;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url("/images/mobile-main-art-img-2x.jpg");
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(/images/tablet-main-art-img-1x.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4) 0%,
+          rgba(47, 48, 58, 0.4) 50%
+        ),
+        url(/images/tablet-main-art-img-2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(/images/desktop-main-art-img-1x.jpg);
+    max-width: 1600px;
+    max-height: 600px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(/images/desktop-main-art-img-2x.jpg);
+  }
 }
 
 .main-phrase-box {
@@ -19,7 +70,7 @@
 
   &__text {
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.36;
     color: rgba(255, 255, 255, 1);
     text-align: center;
@@ -27,6 +78,10 @@
     margin-bottom: 30px;
     padding-top: 106px;
     letter-spacing: 0.06em;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+    }
   }
 
   &__button {

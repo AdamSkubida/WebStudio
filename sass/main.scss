@@ -15,14 +15,22 @@ body {
   background-color: rgba(255, 255, 255, 1);
   margin: 0;
   padding: 0;
+  overflow: visible;
+
+  @media (min-width: 768px) {
+    overflow: visible;
+  }
 }
 
 .container {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  width: 1200px;
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }

@@ -5,7 +5,21 @@
 .page-header__container {
   display: flex;
   align-items: center;
-  height: 80px;
+  justify-content: space-between;
+  height: 60px;
+  padding-left: 15px;
+  padding-right: 23px;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+    justify-content: space-between;
+    padding-right: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 0;
+    justify-content: normal;
+  }
 }
 
 .logo {
@@ -21,12 +35,21 @@
   }
 }
 .navigation {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     width: 254px;
-    margin-left: 94px;
     list-style: none;
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 94px;
+    }
   }
 
   &__item {
@@ -40,8 +63,22 @@
 }
 
 .contact-navigation {
-  display: flex;
-  margin-left: 371px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin-left: 371px;
+    padding-right: 0;
+  }
 
   &__item {
     font-weight: 500;
@@ -52,8 +89,10 @@
     display: flex;
     align-items: center;
 
-    &:first-child {
-      margin-right: 50px;
+    @media (min-width: 1200px) {
+      &:first-child {
+        margin-right: 50px;
+      }
     }
 
     &:hover,
@@ -78,5 +117,20 @@
     border-radius: 3px;
     position: relative;
     top: 29.7px;
+  }
+}
+
+.open-nav {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__button {
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    border-width: 0;
   }
 }
